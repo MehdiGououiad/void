@@ -23,7 +23,7 @@ export default function Home() {
     {console.log(data)}
     return (
       <div>
-       succes
+       
       </div>
     );
    }
