@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import StorieModal from './Modal'
-import SearchInput from '../src/components/SearchInput/SearchInput'
-import { useState,useEffect } from 'react'
-import useSWR from 'swr'
-import axios from 'axios'
+import Head from "next/head"
+import Image from "next/image"
+import StorieModal from "./Modal"
+import SearchInput from "../src/components/SearchInput/SearchInput"
+import { useState,useEffect } from "react"
+import useSWR from "swr"
+import axios from "axios"
 
 export default function Home() {
-  const fetcher = (url) => fetch(url, {mode: 'no-cors'} ).then((res) => {console.log(res); return res.data()});
+  const fetcher = (url) => fetch(url, {mode: "no-cors"} ).then((res) => {console.log(res); return res.data()});
 
   const [show, setShow] = useState(false);
 
@@ -54,14 +54,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 {Apicall()}
-      <header className=' hidden lg:flex justify-between bg-slate-900 p-4 w-full '>
+      <header className=" hidden lg:flex justify-between bg-slate-900 p-4 w-full ">
 
         <div className="main__logo flex items-center">
           <Image src="/logo.svg" alt="logo" width={50} height={50} />
         </div>
         <div className="search__bar flex items-center ">
           <SearchInput variant="role" />
-          <span className='text-white mr-5'>Et / Ou</span>
+          <span className="text-white mr-5">Et / Ou</span>
           <SearchInput variant="location" />
         </div>
         <div className="search__button flex items-center mt-1">
@@ -69,34 +69,34 @@ export default function Home() {
 
         </div>
       </header>
-      <main className='bg-slate-900'>
+      <main className="bg-slate-900">
         <section>
           <div className="flex ml-6 text-white">
-            Fil d'Ariane / Accueil / Annuaire / Specialistes / France
+            Fil d"Ariane / Accueil / Annuaire / Specialistes / France
           </div>
-          <div className='text-yellow-400 text-3xl text-center mt-5	'>
+          <div className="text-yellow-400 text-3xl text-center mt-5	">
             <h1>Prendre RDV avec un(e) spécialiste à proximité de France</h1>
-            <h2 className='text-white'>Trouver un spécialiste au sein des cliniques ELSAN</h2>
+            <h2 className="text-white">Trouver un spécialiste au sein des cliniques ELSAN</h2>
           </div>
         </section>
-        <section className='lg:mx-[20%]'>
-          <div className='flex  text-white'>
-            <div className='bg-yellow-400 px-6 py-3 rounded'>Specialites</div>
-            <div className='bg-gray-800 px-6 py-3 rounded'>Etablissement</div>
+        <section className="lg:mx-[20%]">
+          <div className="flex  text-white">
+            <div className="bg-yellow-400 px-6 py-3 rounded">Specialites</div>
+            <div className="bg-gray-800 px-6 py-3 rounded">Etablissement</div>
           </div>
           <div>
-          <div className='grid grid-cols-[100px_2fr_1fr] text-white border-0 shadow-lg shadow-slate-400	mt-4 p-2		'>
-              <div className='h-70 text-center mt-3'>
+          <div className="grid grid-cols-[100px_2fr_1fr] text-white border-0 shadow-lg shadow-slate-400	mt-4 p-2		">
+              <div className="h-70 text-center mt-3">
                 <Image src="/praticien_default.gif" alt="logo"  width={70} height={70} className="rounded-full" />
               </div>
-              <div className='text-center lg:text-left lg:ml-16'><h2>Pascal Chassot</h2>
+              <div className="text-center lg:text-left lg:ml-16"><h2>Pascal Chassot</h2>
                 <p>Ophtalmologue</p>
                 <p>Clinique ELSAN</p>
                 <p>Tel : 3456789</p>
 
               </div>
-              <div className='flex justify-center items-center'>
-                <button onClick={handleClick} type='button' className='text-white h-12 px-1 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm   mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700'>Rendez-vous</button>
+              <div className="flex justify-center items-center">
+                <button onClick={handleClick} type="button" className="text-white h-12 px-1 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm   mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Rendez-vous</button>
                 {showSingleStorie()}
 
 
