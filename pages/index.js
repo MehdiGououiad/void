@@ -7,7 +7,7 @@ import useSWR from "swr"
 import axios from "axios"
 export async function getStaticProps() {
   const res = await axios.get(
-    "http://localhost:8010/proxy"
+    "http://34.77.87.8:8080/https://elsan.void.fr/fr/jsonapi/node/elsan_praticien"
   );
   return {
     props: {

@@ -3,9 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "proxy": "lcp --proxyUrl https://elsan.void.fr/fr/jsonapi/node/elsan_praticien",
-    "dev": "npm run proxy & next dev",
-    "build": "npm run proxy & next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
