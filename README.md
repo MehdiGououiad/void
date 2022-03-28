@@ -15,9 +15,13 @@ staticSiteRenderingWithRevalidation Branch:
 	1 - forced revalidation every 30 seconds
 
 TODO --
+
 -- Implement experimental unstable_revalidate to revalidate pages on demand 
+
 -- Lighthouse score need to be perfect (100/100) //  some quick fixes
+
 -- staticly build all the modals before hand
+
 
 
 
