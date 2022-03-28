@@ -9,7 +9,7 @@ const fetcher = async (url) => {
   const response = await axios.get(url)
   return response.data
 }
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetcher(
     "http://34.77.87.8:8080/https://elsan.void.fr/fr/jsonapi/node/elsan_praticien"
   );
