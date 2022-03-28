@@ -1,3 +1,23 @@
+Master branch :
+	1 - nextjs app with static side rendering ( indivudual modals are not static site rendered only the home page maybe a fix for a later time)
+	2 - bypassed cors isssue on server with a dedicated proxy hosted on google cloud ( built for this practise test but can fix any cors issue you only need to pass it an url parametre with the link you want bypassed)
+	3 - request returned by the proxy is cached ( using apichache middleware) 
+	4 - All images are lazy loaded / resized with the next/image component
+	5 - implementes simple mocked and unmocked api tests with jest 
+ServerSideRenedering Branch : 
+	1 - in place of SSG , SSR was used
+staticSiteRenderingWithRevalidation Branch:
+	1 - forced revalidation every 30 seconds
+
+TODO --
+-- Implement experimental unstable_revalidate to revalidate pages on demand 
+-- Lighthouse score need to be perfect (100/100) //  some quick fixes
+-- staticly build all the modals before hand
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
