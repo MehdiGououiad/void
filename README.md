@@ -22,6 +22,8 @@ TODO --
 
 -- staticly build all the modals before hand
 
+-- add pagination with swr or react query
+
 
 
 
