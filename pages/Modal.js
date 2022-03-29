@@ -9,7 +9,7 @@ console.log(url)
 
     </div>
     <div className="z-10 mt-24 w-full"> */}
-<iframe className="w-3/5 ml-[20%]" src={url} frameBorder="0"></iframe>
+<iframe className="w-4/5 flex justify-center" src={url} frameBorder="0"></iframe>
     {/* </div> */}
 
 </div>

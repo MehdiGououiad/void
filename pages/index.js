@@ -44,16 +44,21 @@ export default function Home({ data }) {
 
     return (
       data.data.slice(1).map((item, index) => {
+
         let urlrdv = item.attributes.field_elsan_rdv?.uri;
+        var href="https://www.elsan.care/fr"+item.attributes.path.alias;
+        console.log(href)
+
+
         return (
-          <div key={item.id} className="grid grid-cols-[100px_2fr_1fr] text-white border-0 hover:bg-slate-600	mt-4 p-2		">
+          <div key={item.id} className="grid grid-cols-[100px_3fr_1fr] text-black border-0 hover:bg-amber-100 	mt-4 p-2		">
             <div className="h-70 text-center mt-3">
               <Image src="/praticien_default.gif" alt="logo" width={70} height={70} className="rounded-full" />
             </div>
-            <div className="text-center lg:text-left lg:ml-16"><h2>{item.attributes.title}</h2>
-              <p>{item.attributes.field_elsan_profession}</p>
-              <p>Tel {item.attributes.field_vactory_telephone}</p>
-
+            <div className="lg:text-left  lg:ml-5"><a href={href} className="text-2xl font-medium hover:underline	">{item.attributes.title}</a>
+              <p className="">{item.attributes.field_elsan_profession}</p>
+              <p className="text-amber-600 hover:underline">Clinique Saint-François</p>
+              <a href={"tel: "+ item.attributes.field_vactory_telephone}>{item.attributes.field_vactory_telephone}</a>
             </div>
             <div className="flex justify-center items-center">
               {urlrdv ? <button src={urlrdv} onClick={() => handleClick(urlrdv)} type="button" className="text-white h-12 px-1 bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm   mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Rendez-vous</button>
@@ -93,7 +98,7 @@ export default function Home({ data }) {
         <meta name="description" content="Vous cherchez un spécialiste à France ? Prenez rendez-vous avec un spécialiste dans une de nos nombreuses cliniques privées ELSAN." />
         <link rel="icon" type="image/png" sizes="32x32" href="https://www.elsan.care/sites/default/files/favicons/favicon-32x32.png" />
       </Head>
-      <header className=" hidden lg:flex justify-between bg-slate-900 p-4 w-full ">
+      <header className=" hidden lg:flex justify-between bg-sky-600 p-4 w-full ">
 
         <div className="main__logo flex items-center">
           <Image src="/logo.svg" alt="logo" width={50} height={50} />
@@ -108,20 +113,20 @@ export default function Home({ data }) {
 
         </div>
       </header>
-      <main className="bg-slate-900">
+      <main className="bg-gray-100">
         <section>
-          <div className="flex ml-6 text-white">
+          <div className="flex ml-6 text-gray-700">
             Fil d"Ariane / Accueil / Annuaire / Specialistes / France
           </div>
-          <div className="text-yellow-400 text-3xl text-center mt-5 	">
+          <div className="text-sky-600 font-bold	 text-3xl text-center mt-5 	">
             <h1 className="mb-4">Prendre RDV avec un(e) spécialiste à proximité de France</h1>
-            <h2 className="text-white text-lg mb-4">Trouver un spécialiste au sein des cliniques ELSAN</h2>
+            <h2 className="text-black text-lg mb-4">Trouver un spécialiste au sein des cliniques ELSAN</h2>
           </div>
         </section>
         <section className="lg:mx-[20%]">
           <div className="flex  text-white">
-            <div className="bg-yellow-400 px-6 py-3 rounded">Specialites</div>
-            <div className="bg-gray-800 px-6 py-3 rounded">Etablissement</div>
+            <div className="bg-sky-600 px-6 py-3 rounded">Specialites</div>
+            <div className="bg-white text-black px-6 py-3 rounded">Etablissement</div>
           </div>
           <div className=" shadow-lg shadow-slate-300">
 
